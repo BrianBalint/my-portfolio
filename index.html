@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian Balint</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f5f6f8;
+    --border: #dfe3e8;
+    --text: #1c1f23;
+    --muted: #5a626b;
+    --accent: #2b5fa8;
+    --maxw: 940px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 72px 0 56px;
+  }
+
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 2.6rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  header .role {
+    margin: 0 0 20px;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+
+  header .meta {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  header .meta a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  header .meta a:hover { text-decoration: underline; }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    margin: 0 0 24px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  p { margin: 0 0 18px; }
+
+  p:last-child { margin-bottom: 0; }
+
+  .lead { max-width: 68ch; }
+
+  /* Skills */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+
+  .skill-group h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .skill-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .skill-group li {
+    color: var(--muted);
+    font-size: 0.96rem;
+    padding: 3px 0;
+  }
+
+  /* Projects */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .card p {
+    margin: 0 0 14px;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0 64px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    header { padding: 48px 0 40px; }
+    header h1 { font-size: 2rem; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Brian Balint</h1>
+    <p class="role">Director of Technical Engineering &middot; Infrastructure Architecture and Full-Stack Development</p>
+    <p class="meta">Freehold, New Jersey &middot; <a href="https://github.com/BrianBalint">github.com/BrianBalint</a></p>
+  </div>
+</header>
+
+<main>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <div class="lead">
+        <p>I have spent twenty-five years in IT, starting in desktop support and working through to
+        Director-level infrastructure architecture. My first consulting work was for a technology
+        company servicing enterprise law firms in New York City. In 2017 I joined a company opening
+        a cryptocurrency datacenter as lead network design architect.</p>
+
+        <p>Today I am Director of Technical Engineering at Advanced Network Consulting, where I design
+        and run enterprise infrastructure: virtualization, Active Directory, networking, and security
+        compliance. I also build and ship the software that sits on top of it, which means I spend as
+        much time in Python and JavaScript as I do in a hypervisor console.</p>
+
+        <p>I am completing a B.S. in Information Technology at William Paterson University, graduating
+        Fall 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills">
+
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <ul>
+            <li>KVM / libvirt, Hyper-V</li>
+            <li>Linux and Windows Server</li>
+            <li>Active Directory</li>
+            <li>Hyper-V replication, multi-site VPN</li>
+            <li>Backup and disaster recovery</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Networking and Security</h3>
+          <ul>
+            <li>nginx reverse proxy, TLS</li>
+            <li>Single sign-on (Authelia)</li>
+            <li>nftables and iptables</li>
+            <li>Network segmentation and isolation</li>
+            <li>Cybersecurity compliance</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Development</h3>
+          <ul>
+            <li>Python, FastAPI</li>
+            <li>JavaScript, React, Vite</li>
+            <li>MySQL, database design</li>
+            <li>REST API design</li>
+            <li>Git, systemd deployment</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>AI and Data</h3>
+          <ul>
+            <li>Local LLM deployment (Ollama)</li>
+            <li>Retrieval augmented generation</li>
+            <li>Prompt engineering and evaluation</li>
+            <li>Vector search and embeddings</li>
+            <li>Pandas, scikit-learn</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="card">
+          <h3>Meridian CRM Platform</h3>
+          <p>A full-stack SaaS CRM built to be customized to any organization rather than locked to one
+          vertical. React and TypeScript front end, Flask and Gunicorn API, PostgreSQL behind it, served
+          by nginx. Deployed either on infrastructure the customer already owns or hosted for them.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Flask</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Meridian Backup</h3>
+          <p>A backup and disaster recovery platform built from scratch to replace Veeam at client
+          sites, aiming at what a Datto appliance does without the appliance. Agents protect Hyper-V
+          virtual machines and file data and reach outward to a central repository, so a recovery means
+          standing a protected system back up rather than unpacking an archive and hoping. Agent and
+          server are .NET 8, with deduplicating content-addressed storage underneath and the backup
+          orchestration written on top of it.</p>
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">.NET 8</span>
+            <span class="tag">Hyper-V</span>
+            <span class="tag">restic</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Swift Support</h3>
+          <p>A remote support platform built to replace hosted tools like GoToAssist. The agent installs
+          from an MSI and dials outward to a relay, and the technician works from a browser portal, so
+          no inbound firewall rule is ever needed on the client side. Supports both attended and
+          unattended sessions.</p>
+          <div class="tags">
+            <span class="tag">Windows agent</span>
+            <span class="tag">MSI</span>
+            <span class="tag">WebSockets</span>
+            <span class="tag">Relay architecture</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>TDS Mailer</h3>
+          <p>A custom email campaign platform built from scratch to replace an off-the-shelf tool.
+          Contenteditable campaign and template editors, image upload, open and click tracking,
+          contact import with upsert, and a campaign scheduler. Later rebuilt as a React single-page
+          app against the same API.</p>
+          <div class="tags">
+            <span class="tag">Flask</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">React</span>
+            <span class="tag">Postfix</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>StrategiX Global</h3>
+          <p>A marketing site and a separate operations platform for a conference and event management
+          firm. The platform books travel through a GDS and manages events end to end, covering vendors,
+          resources and attendees, with a global calendar spanning every traveler.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">nginx</span>
+            <span class="tag">GDS integration</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Multi-Site Backup Infrastructure</h3>
+          <p>Hyper-V replication across three sites over certificate-authenticated WireGuard tunnels,
+          with PowerShell handling monthly full and daily incremental disk backups, retention policy and
+          email alerting. One site carries a seven-year retention requirement for regulatory compliance,
+          which drove a roughly fifty terabyte lifecycle plan.</p>
+          <div class="tags">
+            <span class="tag">Hyper-V</span>
+            <span class="tag">WireGuard</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">Veeam</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>VHD Builder</h3>
+          <p>An enterprise backup platform that produces bootable virtual disks from protected systems,
+          so a recovery is a machine you can start rather than an archive you have to restore first.
+          A C# Windows application using VSS with incremental and differential chains, packaged as an
+          MSI, paired with a Linux backup server and a licensing system using hardware fingerprinting.</p>
+          <div class="tags">
+            <span class="tag">C#</span>
+            <span class="tag">VSS</span>
+            <span class="tag">WiX</span>
+            <span class="tag">Flask</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Brian Balint &middot; Freehold, New Jersey</p>
+  </div>
+</footer>
+
+</body>
+</html>
